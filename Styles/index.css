@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 /*General Classes*/
-*{
+* {
     padding: 0px;
     margin: 0px;
     text-decoration: none;
@@ -12,10 +12,10 @@
 body {
     font-family: "Oswald", serif;
     font-optical-sizing: auto;
-    font-style: normal; 
+    font-style: normal;
 }
 
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,62 +23,62 @@ nav{
 }
 
 /*Variables*/
-:root{
+:root {
     --gradient-green: linear-gradient(to right, #0b976d, #079c83);
     --background-green: #0b4738;
 }
 
 /*Reusable classes*/
-.container{
+.container {
     max-width: 1440px;
     padding: 0 5%;
     margin: 0 auto;
 }
 
 /*Website Classes*/
-.green-background{
+.green-background {
     background: var(--background-green);
 }
 
-.logo{
- background: blue;
- height: 50px;
- width: 50px;
- overflow: ;
+.logo {
+    border: 2px solid transparent;
+    background: linear-gradient(rgb(230, 74, 1), rgb(107, 57, 0)) padding-box,
+        linear-gradient(45deg, #f18c52, #ffd5be) border-box;
+    border-radius: 55px;
+    height: 50px;
+    width: 50px;
 }
 
-.logo a{
+.logo a {
     font-size: 30px;
     font-weight: bold;
     color: white;
 }
 
-.logo a img{
-    width: 50px;
-    height: 50px;
+.logo a img {
+    width: 60px;
+    height: 60px;
 }
 
-.list{
+.list {
     display: flex;
     align-items: center;
 }
 
-.list li{
+.list li {
     margin: 0 35px;
     font-size: 15px;
 }
 
-.list li a{
+.list li a {
     color: white;
 }
 
 /*Buttons*/
-.btn-gradient{
+.btn-gradient {
     padding: 10px 25px;
     color: white;
     border: none;
     cursor: pointer;
     background-image: var(--gradient-green);
 }
-
-
