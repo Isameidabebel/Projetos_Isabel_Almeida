@@ -9,35 +9,49 @@
     <link rel="icon" href="./Images/Logo_Sem_Background.png" type="image/png">
 </head>
 
+
 <body>
-    <div class="green-background">
-        <!-- Header-->
+    <div class="background-header">
+        <!-- Header -->
         <header>
-            <!-- Container-->
+            <!-- Container -->
             <div class="container">
                 <nav>
                     <div class="logo">
-                        <a href="index.html"><img src="./Images/Logo_Sem_Background.png"
+                        <a href="index.html"><img src="./Images/Logo.png"
                                 alt="Logo do site composta por a imagem de um gatinho laranja"></a>
                     </div>
-                    <ul class="list">
-                        <li><a href="#">Teste</a></li>
-                        <li><a href="#">Teste</a></li>
-                        <li><a href="#">Teste</a></li>
-                        <li><a href="#"><button class="btn-gradient">Teste</button></a></li>
+                    <button class="menu-toggle" id="menu-toggle">☰</button>
+                    <ul class="menu" id="menu">
+                        <li><a href="#">Cardápio</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Gatos&Adoção</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
-        <!--Content Container-->
-        <main>
-            <div class="container_banner_back">
-                <div class="container_banner">
-                    <img src="./Images/CapaCafé.png" alt="Miaulatte - Café e Gatos">
-                </div>
-            </div>
-        </main>
     </div>
+
+    <!-- Content Container -->
+    <main>
+        <div class="container_banner">
+            <img src="./Images/CapaCafé.png" alt="Miaulatte - Café e Gatos">
+        </div>
+    </main>
+    <script>
+        // Seleciona o botão de menu e o menu
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+
+        // Adiciona um evento de clique ao botão de menu
+        menuToggle.addEventListener('click', function () {
+            // Alterna a classe 'show' no menu, que exibe ou esconde o menu
+            menu.classList.toggle('show');
+        });
+
+    </script>
 </body>
+
 
 </html>

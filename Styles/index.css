@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
-/*General Classes*/
+/* General Classes */
 * {
     padding: 0px;
     margin: 0px;
@@ -22,31 +22,31 @@ nav {
     padding: 20px;
 }
 
-/*Variables*/
+/* Variables */
 :root {
-    --gradient-green: linear-gradient(to right, #0b976d, #079c83);
-    --background-green: #0b4738;
+    --gradient-default: linear-gradient(to right, #fb6449, rgb(192, 140, 62));
 }
 
-/*Reusable classes*/
+/* Reusable classes */
 .container {
     max-width: 1440px;
     padding: 0 5%;
     margin: 0 auto;
+    border: 1px solid white;
 }
 
-/*Website Classes*/
-.green-background {
-    background: var(--background-green);
+/* Website Classes */
+/* Header */
+.background-header {
+    background: var(--gradient-default);
 }
 
 .logo {
-    border: 2px solid transparent;
-    background: linear-gradient(rgb(230, 74, 1), rgb(107, 57, 0)) padding-box,
-        linear-gradient(45deg, #f18c52, #ffd5be) border-box;
-    border-radius: 55px;
     height: 50px;
-    width: 50px;
+    width: 190px;
+    align-items: center;
+    justify-content: bottom;
+    display: flex;
 }
 
 .logo a {
@@ -56,25 +56,47 @@ nav {
 }
 
 .logo a img {
-    width: 60px;
-    height: 60px;
+    margin-top: 15px;
+    width: 100%;
+    height: 100%;
 }
 
-.list {
+.menu {
+    justify-content: center;
     display: flex;
     align-items: center;
 }
 
-.list li {
+.menu li {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
     margin: 0 35px;
-    font-size: 15px;
+    font-size: 18px;
+    font-weight: normal;
 }
 
-.list li a {
+.menu li a {
+    font-weight: normal;
+    padding: 5px;
     color: white;
+    transition: transform 0.5s ease;
 }
 
-/*Buttons*/
+.menu li a:hover {
+    font-weight: normal;
+    padding: 5px;
+    color: rgb(255, 68, 0);
+}
+
+.menu li a:active {
+    transform: scale(0.9);
+    color: #ff0000;
+}
+
+/* Buttons */
 .btn-gradient {
     padding: 10px 25px;
     color: white;
@@ -83,28 +105,92 @@ nav {
     background-image: var(--gradient-green);
 }
 
-/*Banner Miaullate*/
-.container_banner{
-    background-image: url('../Images/Background_Capa1.png');
-    background-size: cover;     
+/* Banner Miaullate */
+.container_banner {
+    background-image: url('../Images/Background_Capa2.png');
+    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     width: 100%;
     height: 534px;
     overflow: hidden;
     align-items: center;
     justify-content: center;
-    display: flex;  
+    display: flex;
 }
 
-.container_banner_back{
-    background: black;
-    width: 100%;
-    height: 534px;
-    overflow: hidden;
-    align-items: center;
-    justify-content: center;
-    display: flex;  
+/* Estilo para o botão de menu */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
 }
 
+/* Estilos Responsivos */
+@media (max-width: 925px) {
+    /* Menu escondido por padrão */
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background: linear-gradient(to right, #fb6449, rgb(192, 140, 62));
+        position: absolute;
+        top: 90px;
+        /* Ajuste para que o menu apareça abaixo da logo */
+        left: 0;
+        z-index: 100;
+        border: 1px solid white;
+    }
 
+    .menu li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+}
+
+@media (max-width: 600px) {
+    .container_banner img{
+        transform: scale(0.9);
+    }
+}
+
+@media (max-width: 490px) {
+    .container_banner img{
+        transform: scale(0.8);
+    }
+
+    .container_banner{
+        height: 480px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container_banner img{
+        transform: scale(0.7);
+    }
+
+    .container_banner{
+        height: 450px;
+    }
+}
+
+@media (max-width: 350px) {
+    .container_banner img{
+        transform: scale(0.5);
+    }
+
+    .container_banner{
+        height: 350px;
+    }
+}
